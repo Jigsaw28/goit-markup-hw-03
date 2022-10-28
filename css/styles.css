@@ -9,10 +9,17 @@ body {
     font-size: 14px;
     font-family: Roboto, sans-serif;
     color: #212121;
+    width: 1600px;
 }
 h1, h2, h3, h4, h5, h6, p, ul {
     margin: 0;
     padding: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 a {
@@ -23,6 +30,8 @@ a {
 }
 
 li {
+    padding: 0;
+    margin: 0;
     list-style: none;
 }
 .button {
@@ -48,17 +57,27 @@ li {
 }
 
 /*Оформлення шапки*/
-header {
+.page-header {
+    display: flex;
+    justify-content: center;
+    width:1600px;
     background-color: var(--header-color);
     margin-bottom: 0;
+    border-bottom: 1px solid #ECECEC;;
 }
-
+.main-nav {
+    display: flex;;
+    width: 1200px;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 .logo {
-        font-family: 'Raleway', sans-serif;
-        font-weight: 700;
-        font-size: 26px;
-        line-height: 1.19;
-        letter-spacing: 0.03em;   
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;   
+    font-family: 'Raleway', sans-serif;
 }
 
 .logotype {
@@ -67,9 +86,14 @@ header {
 
 .nav-menu {
     display:flex;
+    margin-left: 93px;
 }
 .nav-menu .item:not(:last-child) {
     margin-right: 50px;
+}
+.nav-menu .nav-link {
+    display: block;
+    padding: 32px 0;
 }
 
 .nav-link {
@@ -85,6 +109,7 @@ header {
 /*auth-nav*/
 .auth-nav {
     display: flex;
+    margin-left: auto;
 }
 .auth-nav .item:not(:last-child) {
     margin-right: 50px;
@@ -94,12 +119,15 @@ header {
         line-height: 1.4px;
         letter-spacing: 0.02em;
         color: #757575;
+    
 }
 
 
 /*Герой*/
 .hero {
     background-color: var(--hero-color);
+    width: 1600px;
+    padding: 200px 0;
 }
 .hero-title {
     font-weight: 900;
@@ -110,10 +138,35 @@ header {
     text-transform: uppercase;
     color: #FFFFFF;
 }
+.hero-btn {
+    display: inline-block;
+    margin-left: 692px;
+    margin-top: 40px;
+    width: 216px;
+    height: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
 
 /*Особливості*/
 .peculiarity, .work {
     background-color:var(--header-color);
+}
+.peculiarity .container {
+    margin-left: 200px;
+    width: 1200px; 
+    padding: 94px 0; 
+    display: flex;
+    justify-content: center;
+}
+.peculiarity .list-menu {
+    display: flex;
+}
+.peculiarity .list-item{
+    width:270px;
+}
+.peculiarity .list-item:not(:last-child) {
+    margin-right: 30px;
 }
 .peculiarity .title {
     font-size: 14px;
@@ -128,18 +181,41 @@ header {
 }
 
 /*Чим ми займаємось?*/
+.work .container {
+    width: 1200px;
+    margin-left: 200px;
+    padding-bottom: 94px;
+}
+.work .list-menu {
+    display: flex;
+    justify-content:center;
+}
 .work .title {
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
     letter-spacing: 0.03em;
+    margin-bottom: 50px;
+}
+.work .list-item:not(:last-child){
+    margin-right: 30px;
 }
 
 /*Наша команда*/
 .team {
     background-color: var(--our-team-color);
 }
+.team .container {
+    width: 1200px;
+    margin-left: 200px;
+    padding: 0 15px 94px;
+}
+.team .list-menu {
+    display: flex;
+    justify-content: center;
+}
 .team .title {
+    margin-bottom: 50px;
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
@@ -150,7 +226,12 @@ header {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
+.team .card:not(:last-child) {
+    margin-right: 30px;
+}
 .team .sub-title {
+    margin-top: 30px;
+    margin-bottom: 10px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;
@@ -158,6 +239,7 @@ header {
     letter-spacing: 0.03em;
 }
 .team .text {
+    margin-bottom: 30px;
     font-size: 16px;
     line-height: 1.18;
     text-align: center;
@@ -166,13 +248,26 @@ header {
 }
 
 /*Підвал сайту*/
-footer {
+.footer {
     background-color: var(--hero-color);
+}
+.footer .container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 200px;
+}
+.footer .logo {
+    display: inline-block;
+    margin-top: 60px;
+    margin-bottom: 20px;
 }
 .studio {
     color:#FFFFFF;
 }
 .location {
+    display: inline-block;
+    margin-bottom: 9px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: #FFFFFF;
@@ -182,6 +277,14 @@ footer {
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+}
+.footer .mail {
+    display: inline-block;
+    margin-bottom: 9px;
+}
+.footer .tel {
+    display: inline-block;
+    margin-bottom: 60px;
 }
 
 /*Сторінка портфоліо*/
