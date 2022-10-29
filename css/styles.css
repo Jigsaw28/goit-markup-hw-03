@@ -67,7 +67,7 @@ li {
 }
 .main-nav {
     display: flex;;
-    width: 1200px;
+    width: 1230px;
     align-items: center;
     padding-left: 15px;
     padding-right: 15px;
@@ -128,6 +128,7 @@ li {
     background-color: var(--hero-color);
     width: 1600px;
     padding: 200px 0;
+    text-align: center;
 }
 .hero-title {
     font-weight: 900;
@@ -140,7 +141,6 @@ li {
 }
 .hero-btn {
     display: inline-block;
-    margin-left: 692px;
     margin-top: 40px;
     width: 216px;
     height: 50px;
@@ -153,9 +153,9 @@ li {
     background-color:var(--header-color);
 }
 .peculiarity .container {
-    margin-left: 200px;
-    width: 1200px; 
-    padding: 94px 0; 
+    margin-left: 185px;
+    width: 1230px; 
+    padding: 94px 15px; 
     display: flex;
     justify-content: center;
 }
@@ -182,8 +182,10 @@ li {
 
 /*Чим ми займаємось?*/
 .work .container {
-    width: 1200px;
-    margin-left: 200px;
+    width: 1230px;
+    margin-left: 185px;
+    padding-left: 15px;
+    padding-right: 15px;
     padding-bottom: 94px;
 }
 .work .list-menu {
@@ -206,8 +208,8 @@ li {
     background-color: var(--our-team-color);
 }
 .team .container {
-    width: 1200px;
-    margin-left: 200px;
+    width: 1230px;
+    margin-left: 185px;
     padding: 0 15px 94px;
 }
 .team .list-menu {
@@ -252,10 +254,10 @@ li {
     background-color: var(--hero-color);
 }
 .footer .container {
-    width: 1200px;
+    width: 1230px;
     padding-left: 15px;
     padding-right: 15px;
-    margin-left: 200px;
+    margin-left: 185px;
 }
 .footer .logo {
     display: inline-block;
@@ -297,6 +299,7 @@ li {
     background-color: #F5F4FA;
     border: 0;
     cursor: pointer;
+    border-radius: 4px;
 }
 
 .btn:hover {
@@ -309,7 +312,32 @@ li {
     background-color: #FFFFFF;
 
 }
+.page .container {
+    width: 1230px;
+    padding-top: 94px;
+    padding-bottom: 94px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 185px;
+}
+.page .list-filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.page .list-item:not(:last-child) {
+    margin-right: 8px;
+}
+.page .list-menu {
+    flex-basis: calc((100%-60px)/3);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
 .page .title {
+    margin-top: 20px;
+    margin-bottom: 4px;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
