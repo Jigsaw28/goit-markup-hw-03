@@ -9,26 +9,22 @@ body {
     font-size: 14px;
     font-family: Roboto, sans-serif;
     color: #212121;
-    width: 1600px;
 }
 h1, h2, h3, h4, h5, h6, p, ul {
     margin: 0;
     padding: 0;
 }
-
 img {
     display: block;
     width: 100%;
     height: auto;
 }
-
 a {
     text-decoration: none;
 }
 .link {
     color: #212121;
 }
-
 li {
     padding: 0;
     margin: 0;
@@ -42,6 +38,9 @@ li {
     background-color:#2196F3;
     font-size: 16px;
     cursor: pointer;
+}
+address {
+    font-style: normal;
 }
 .visually-hidden {
     position: absolute;
@@ -60,18 +59,19 @@ li {
 .page-header {
     display: flex;
     justify-content: center;
-    width:1600px;
     background-color: var(--header-color);
     margin-bottom: 0;
-    border-bottom: 1px solid #ECECEC;;
+    border-bottom: 1px solid #ECECEC;
 }
 .main-nav {
-    display: flex;;
-    width: 1230px;
+    display: flex;
     align-items: center;
     padding-left: 15px;
     padding-right: 15px;
-}
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    }
 .logo {
     font-weight: 700;
     font-size: 26px;
@@ -79,11 +79,9 @@ li {
     letter-spacing: 0.03em;   
     font-family: 'Raleway', sans-serif;
 }
-
 .logotype {
     color: #2196F3;
 }
-
 .nav-menu {
     display:flex;
     margin-left: 93px;
@@ -95,14 +93,15 @@ li {
     display: block;
     padding: 32px 0;
 }
-
 .nav-link {
     font-weight: 500;
     letter-spacing: 0.02em;
     line-height: 1.14;
 }
-
- .nav-link:hover, .contact-link:hover {
+.active {
+color: #2196F3;
+}
+ .contact-link:hover {
     color: #2196F3;
 }
 
@@ -126,7 +125,7 @@ li {
 /*Герой*/
 .hero {
     background-color: var(--hero-color);
-    width: 1600px;
+    /*width: 1600px;*/
     padding: 200px 0;
     text-align: center;
 }
@@ -147,15 +146,22 @@ li {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
 }
-
+.peculiarity {
+    padding: 94px 0;
+}
+.work, .team {
+    padding-bottom: 94px;
+}
 /*Особливості*/
 .peculiarity, .work {
     background-color:var(--header-color);
 }
+
 .peculiarity .container {
-    margin-left: 185px;
-    width: 1230px; 
-    padding: 94px 15px; 
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px; 
+    padding: 0 15px; 
     display: flex;
     justify-content: center;
 }
@@ -182,11 +188,11 @@ li {
 
 /*Чим ми займаємось?*/
 .work .container {
-    width: 1230px;
-    margin-left: 185px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
-    padding-bottom: 94px;
 }
 .work .list-menu {
     display: flex;
@@ -208,9 +214,10 @@ li {
     background-color: var(--our-team-color);
 }
 .team .container {
-    width: 1230px;
-    margin-left: 185px;
-    padding: 0 15px 94px;
+    width: 1200px;
+    margin-left:auto;
+    margin-right: auto;
+    padding: 0 15px;
 }
 .team .list-menu {
     display: flex;
@@ -252,24 +259,25 @@ li {
 /*Підвал сайту*/
 .footer {
     background-color: var(--hero-color);
+    padding: 60px 0;
 }
 .footer .container {
-    width: 1230px;
+    width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
-    margin-left: 185px;
+    margin-left: auto;
+    margin-right: auto;
 }
-.footer .logo {
-    display: inline-block;
-    margin-top: 60px;
-    margin-bottom: 20px;
+.footer .menu {
+    margin-top: 20px;
+}
+.footer .items:not(:last-child) {
+    margin-bottom: 9px;
 }
 .studio {
     color:#FFFFFF;
 }
 .location {
-    display: inline-block;
-    margin-bottom: 9px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: #FFFFFF;
@@ -279,14 +287,6 @@ li {
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
-}
-.footer .mail {
-    display: inline-block;
-    margin-bottom: 9px;
-}
-.footer .tel {
-    display: inline-block;
-    margin-bottom: 60px;
 }
 
 /*Сторінка портфоліо*/
@@ -310,15 +310,15 @@ li {
 
 .page {
     background-color: #FFFFFF;
-
-}
-.page .container {
-    width: 1230px;
     padding-top: 94px;
     padding-bottom: 94px;
+}
+.page .container {
+    width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
-    margin-left: 185px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page .list-filter {
     display: flex;
@@ -336,20 +336,29 @@ li {
     gap: 30px;
 }
 .page .title {
-    margin-top: 20px;
-    margin-bottom: 4px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 20px;
+    padding-bottom: 4px;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
+    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
 }
 .page .text {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 20px;
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em;
     color: #757575;
+    border-left: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
 }
 
-
-
-
-
+.page .btn {
+    padding: 6px 22px;
+}
